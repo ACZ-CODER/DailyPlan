@@ -104,7 +104,6 @@ void showIncompletePlans(){
 }
 // 完成计划中一项
 void markComplete(){
-    std::cout << "1111111111";
     showIncompletePlans();
     int index;
     std::cout << "输入要标记完成的计划序号: ";
@@ -138,6 +137,9 @@ void deletePlan(){
     std::cin >> index;
     if (index > 0 && index <= plans.size()) {
         plans.erase(plans.begin() + index - 1);
+    }else{
+        std::cout << "无效选择。\n";
+        return;
     }
 }
 
